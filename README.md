@@ -61,7 +61,7 @@ Sistem cerdas berbasis IoT untuk pemantauan kualitas air arwana (pH, suhu, keker
 
 ## 📨 Hubungi Saya
 Saya terbuka untuk peluang kerja, kolaborasi proyek, atau diskusi mengenai teknologi web dan IoT:
-* **LinkedIn**: [Benedictus Irvanda](https://linkedin.com/in/usernameanda)
+* **LinkedIn**: [Linkedin](https://www.linkedin.com/in/irvandanugroho)
 * **WhatsApp**: [+62 812-8812-6260](https://wa.me/6281288126260)
 * **Email**: [irvandanugroho08@gmail.com](mailto:irvandanugroho08@gmail.com)
 * **Website**: [https://irvanda08.github.io/portfolio-irvanda/](https://irvanda08.github.io/portfolio-irvanda/)
