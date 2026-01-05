@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio Benedictus Irvanda Nugroho - Web Developer & IoT Enthusiast dengan pengalaman di PT Muara Mitra Mandiri dan KRTI."
+    />
+    <meta
+      name="keywords"
+      content="Web Developer, IoT, PHP, Tailwind, Robotics, KRTI, Benedictus Irvanda"
+    />
+    <link rel="icon" type="image/png" href="img/irvan.jpg" />
     <title>Portfolio Saya | Web Developer</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -27,8 +36,22 @@
               sans: ["Poppins", "sans-serif"],
             },
             colors: {
-              primary: "#4F46E5", // Indigo modern
-              secondary: "#64748B", // Slate grey
+              primary: "#4F46E5",
+              secondary: "#64748B",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0", transform: "translateY(10px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+              zoomIn: {
+                "0%": { opacity: "0", transform: "scale(0.95)" },
+                "100%": { opacity: "1", transform: "scale(1)" },
+              },
+            },
+            animation: {
+              fadeIn: "fadeIn 0.3s ease-out forwards",
+              zoomIn: "zoomIn 0.2s ease-out forwards",
             },
           },
         },
@@ -49,6 +72,9 @@
         <div class="hidden md:flex space-x-8 font-medium text-gray-600">
           <a href="#home" class="hover:text-primary transition">Beranda</a>
           <a href="#about" class="hover:text-primary transition">Tentang</a>
+          <a href="#experience" class="hover:text-primary transition"
+            >Pengalaman</a
+          >
           <a href="#portfolio" class="hover:text-primary transition"
             >Portfolio</a
           >
@@ -72,6 +98,9 @@
         >
         <a href="#about" class="block text-gray-600 hover:text-primary"
           >Tentang</a
+        >
+        <a href="#experience" class="block text-gray-600 hover:text-primary"
+          >Pengalaman</a
         >
         <a href="#portfolio" class="block text-gray-600 hover:text-primary"
           >Portfolio</a
@@ -139,15 +168,15 @@
             <h2 class="text-3xl font-bold text-gray-900">Tentang Saya</h2>
             <div class="w-16 h-1 bg-primary rounded"></div>
             <p class="text-secondary leading-relaxed">
-              Lulusan [Jurusan/Kampus] dengan minat tinggi di dunia pengembangan
-              web. Memiliki pengalaman membuat antarmuka pengguna yang responsif
-              menggunakan <b>Tailwind CSS</b> dan <b>Bootstrap</b>.
+              Lulusan <b>Informatika</b> dari UPN "Veteran" Yogyakarta dengan
+              minat tinggi di dunia pengembangan web. Memiliki pengalaman
+              membuat antarmuka pengguna yang responsif menggunakan
+              <b>Tailwind CSS</b> dan <b>Bootstrap</b>.
             </p>
             <p class="text-secondary leading-relaxed">
               Saat ini saya sedang fokus mengembangkan kemampuan Fullstack
               dengan mempelajari <b>PHP</b> dan <b>MySQL</b> untuk membangun
-              aplikasi web yang dinamis. Saya juga memiliki pengalaman dalam
-              integrasi IoT.
+              aplikasi web yang dinamis.
             </p>
 
             <div class="mt-6 border-l-4 border-indigo-100 pl-4 space-y-4">
@@ -237,6 +266,110 @@
       </div>
     </section>
 
+    <section id="experience" class="py-16 bg-white border-t border-slate-100">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">
+            Pengalaman & Organisasi
+          </h2>
+          <p class="text-secondary mt-2">
+            Perjalanan saya dalam dunia Robotika, IoT, dan Embedded System.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div
+            class="flex flex-col md:flex-row gap-6 items-start p-6 bg-slate-50 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="bg-indigo-600 text-white p-4 rounded-xl shadow-lg shrink-0"
+            >
+              <i class="fas fa-plane-departure text-2xl"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex flex-col md:flex-row justify-between mb-2">
+                <h4 class="text-xl font-bold text-gray-900">
+                  Racing Plane Pilot & Team Leader
+                </h4>
+                <span
+                  class="text-xs font-bold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full w-fit mt-2 md:mt-0"
+                  >Jul 2023 - Jul 2024</span
+                >
+              </div>
+              <p class="text-sm font-semibold text-gray-600 mb-3">
+                Kontes Robot Terbang Indonesia (KRTI) – National UAV Competition
+              </p>
+              <ul
+                class="list-disc pl-4 text-secondary text-sm space-y-2 leading-relaxed"
+              >
+                <li>
+                  Mewakili UPN "Veteran" Yogyakarta dalam
+                  <b>dua kompetisi nasional berturut-turut</b>.
+                </li>
+                <li>
+                  <b>Team Leader & Pilot (2024):</b> Memimpin tim beranggotakan
+                  3 orang, menjadi pilot utama UAV V-tail racing, serta
+                  mengoordinasikan uji terbang dan misi balap.
+                </li>
+                <li>
+                  <b>GCS Operator (2023):</b> Mengoperasikan
+                  <i>ArduPilot Mission Planner</i> untuk misi otonom, manajemen
+                  telemetri, dan monitoring real-time.
+                </li>
+              </ul>
+              <button
+                onclick="openModal('modal-robotik')"
+                class="mt-4 text-xs font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-2"
+              >
+                <i class="fas fa-images"></i> Lihat Dokumentasi Lomba
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col md:flex-row gap-6 items-start p-6 bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition"
+          >
+            <div
+              class="bg-slate-800 text-white p-4 rounded-xl shadow-lg shrink-0"
+            >
+              <i class="fas fa-microchip text-2xl"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex flex-col md:flex-row justify-between mb-2">
+                <h4 class="text-xl font-bold text-gray-900">
+                  UAV & Embedded Systems Enthusiast
+                </h4>
+                <span
+                  class="text-xs font-bold text-slate-600 bg-slate-100 px-3 py-1 rounded-full w-fit mt-2 md:mt-0"
+                  >Oct 2022 - Aug 2024</span
+                >
+              </div>
+              <p class="text-sm font-semibold text-gray-600 mb-3">
+                RUVY - Robotics UPN "Veteran" Yogyakarta
+              </p>
+              <ul
+                class="list-disc pl-4 text-secondary text-sm space-y-2 leading-relaxed"
+              >
+                <li>
+                  Bergabung dalam komunitas robotika universitas dengan fokus
+                  pada pengembangan sistem UAV dan otomasi berbasis IoT.
+                </li>
+                <li>
+                  Berkontribusi dalam riset <i>Flight Control</i>, integrasi
+                  sensor, dan perencanaan misi menggunakan
+                  <b>Cube Orange Autopilot</b>.
+                </li>
+                <li>
+                  Menguasai teknis aerodinamika, telemetri sistem, dan desain
+                  hardware wahana udara.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="portfolio" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
@@ -250,11 +383,13 @@
           <div
             class="bg-white rounded-xl shadow-lg hover:shadow-xl transition overflow-hidden group border border-slate-100 flex flex-col"
           >
-            <div class="relative h-64 bg-gray-100 border-b border-gray-100">
+            <div
+              class="relative h-64 bg-gray-100 border-b border-gray-100 group-hover:bg-indigo-50 transition"
+            >
               <img
                 src="img/PTMMM-inventory.png"
                 alt="PT MMM Inventory"
-                class="w-full h-full object-contain p-2"
+                class="w-full h-full object-contain p-2 transition duration-300"
               />
             </div>
             <div class="p-6 flex flex-col flex-1">
@@ -266,8 +401,8 @@
                 >
               </div>
               <p class="text-secondary text-sm mb-4 flex-1">
-                Sistem manajemen stok gudang yang digunakan secara operasional
-                oleh <b>PT Muara Mitra Mandiri</b>. Memantau mutasi barang, stok
+                Sistem manajemen stok gudang operasional untuk
+                <b>PT Muara Mitra Mandiri</b>. Memantau mutasi barang, stok
                 opname, dan pelaporan otomatis.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
@@ -285,21 +420,23 @@
                 >
               </div>
               <div class="grid grid-cols-3 gap-2 mt-auto">
+                <button
+                  onclick="openModal('modal-mmm-real')"
+                  class="text-center bg-gray-800 text-white py-2 rounded-lg text-[10px] font-bold hover:bg-black transition flex items-center justify-center gap-1"
+                >
+                  <i class="fas fa-info-circle"></i> Detail
+                </button>
                 <a
                   href="http://gudangmmm.infinityfree.me/"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-center bg-primary text-white py-2 rounded-lg text-[10px] font-bold hover:bg-indigo-700 transition"
                   ><i class="fas fa-external-link-alt"></i> Web</a
                 >
                 <a
-                  href="#"
-                  target="_blank"
-                  class="text-center bg-emerald-600 text-white py-2 rounded-lg text-[10px] font-bold hover:bg-emerald-700 transition"
-                  ><i class="fas fa-play"></i> Video</a
-                >
-                <a
                   href="https://github.com/Irvanda08/inventory-mmm"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-center border border-gray-300 text-gray-700 py-2 rounded-lg text-[10px] font-bold hover:bg-gray-100 transition"
                   ><i class="fab fa-github"></i> Code</a
                 >
@@ -310,11 +447,13 @@
           <div
             class="bg-white rounded-xl shadow-lg hover:shadow-xl transition overflow-hidden group border border-slate-100 flex flex-col"
           >
-            <div class="relative h-64 bg-gray-100 border-b border-gray-100">
+            <div
+              class="relative h-64 bg-gray-100 border-b border-gray-100 group-hover:bg-indigo-50 transition"
+            >
               <img
                 src="img/PTMMM-V1.png"
                 alt="Admin Stok Gudang"
-                class="w-full h-full object-contain p-2"
+                class="w-full h-full object-contain p-2 transition duration-300"
               />
             </div>
             <div class="p-6 flex flex-col flex-1">
@@ -327,9 +466,7 @@
               </div>
               <p class="text-secondary text-sm mb-4 flex-1">
                 Panel administrasi inventaris dengan fitur CRUD lengkap,
-                pencarian barang, filter laporan berdasarkan periode (7 hari, 1
-                bulan, dll), serta fitur cetak laporan ke format PDF menggunakan
-                <b>FPDF</b>.
+                pencarian barang, filter laporan, dan cetak PDF.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
@@ -345,7 +482,13 @@
                   >FPDF</span
                 >
               </div>
-              <div class="grid grid-cols-2 gap-2 mt-auto">
+              <div class="grid grid-cols-3 gap-2 mt-auto">
+                <button
+                  onclick="openModal('modal-mmm-academic')"
+                  class="text-center bg-gray-800 text-white py-2 rounded-lg text-[10px] font-bold hover:bg-black transition flex items-center justify-center gap-1"
+                >
+                  <i class="fas fa-info-circle"></i> Detail
+                </button>
                 <a
                   href="https://drive.google.com/file/d/1twleFbfvvkw9TikqANPnqEQT1plGEFza/view?usp=drive_link"
                   target="_blank"
@@ -367,11 +510,13 @@
           <div
             class="bg-white rounded-xl shadow-lg hover:shadow-xl transition overflow-hidden group border border-slate-100 flex flex-col"
           >
-            <div class="relative h-64 bg-gray-100 border-b border-gray-100">
+            <div
+              class="relative h-64 bg-gray-100 border-b border-gray-100 group-hover:bg-indigo-50 transition"
+            >
               <img
                 src="img/bpjs.png"
                 alt="BPJS Project"
-                class="w-full h-full object-contain p-2"
+                class="w-full h-full object-contain p-2 transition duration-300"
               />
             </div>
             <div class="p-6 flex flex-col flex-1">
@@ -383,9 +528,8 @@
                 >
               </div>
               <p class="text-secondary text-sm mb-4 flex-1">
-                Simulasi website pendaftaran kepesertaan BPJS Kesehatan secara
-                online. Mencakup formulir validasi data diri, upload berkas, dan
-                cetak kartu sementara.
+                Simulasi website pendaftaran kepesertaan BPJS Kesehatan.
+                Mencakup formulir validasi data diri dan upload berkas.
               </p>
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
@@ -398,19 +542,27 @@
                 >
                 <span
                   class="text-[10px] bg-slate-100 px-2 py-1 rounded text-slate-600 font-bold italic"
-                  >JavaScript</span
+                  >JS</span
                 >
               </div>
-              <div class="grid grid-cols-2 gap-2 mt-auto">
+              <div class="grid grid-cols-3 gap-2 mt-auto">
+                <button
+                  onclick="openModal('modal-bpjs')"
+                  class="text-center bg-gray-800 text-white py-2 rounded-lg text-[10px] font-bold hover:bg-black transition flex items-center justify-center gap-1"
+                >
+                  <i class="fas fa-info-circle"></i> Detail
+                </button>
                 <a
                   href="https://drive.google.com/file/d/1cYmArtM3ISRc1cgJRazkt8WrX1OFqfBp/view?usp=drive_link"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-center bg-emerald-600 text-white py-2 rounded-lg text-[10px] font-bold hover:bg-emerald-700 transition"
                   ><i class="fas fa-play"></i> Video</a
                 >
                 <a
                   href="https://github.com/Irvanda08/BPJS-Registration-System"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-center border border-gray-300 text-gray-700 py-2 rounded-lg text-[10px] font-bold hover:bg-gray-100 transition"
                   ><i class="fab fa-github"></i> Code</a
                 >
@@ -426,11 +578,13 @@
             >
               SKRIPSI / IOT
             </div>
-            <div class="relative h-64 bg-gray-100 border-b border-gray-100">
+            <div
+              class="relative h-64 bg-gray-100 border-b border-gray-100 group-hover:bg-indigo-50 transition"
+            >
               <img
                 src="img/iot.png"
                 alt="IoT Project"
-                class="w-full h-full object-contain p-2"
+                class="w-full h-full object-contain p-2 transition duration-300"
               />
             </div>
             <div class="p-6 flex flex-col flex-1">
@@ -456,16 +610,24 @@
                   >Python</span
                 >
               </div>
-              <div class="grid grid-cols-2 gap-2 mt-auto">
+              <div class="grid grid-cols-3 gap-2 mt-auto">
+                <button
+                  onclick="openModal('modal-iot')"
+                  class="text-center bg-gray-800 text-white py-2 rounded-lg text-[10px] font-bold hover:bg-black transition flex items-center justify-center gap-1"
+                >
+                  <i class="fas fa-info-circle"></i> Detail
+                </button>
                 <a
                   href="https://drive.google.com/file/d/1ndROStsBgy_dxV0vdJM12j-S8AXphHoh/view?usp=sharing"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-center bg-emerald-600 text-white py-2 rounded-lg text-[10px] font-bold hover:bg-emerald-700 transition"
                   ><i class="fas fa-play"></i> Video</a
                 >
                 <a
                   href="https://github.com/Irvanda08/IoT-Parking-System"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="text-center border border-gray-300 text-gray-700 py-2 rounded-lg text-[10px] font-bold hover:bg-gray-100 transition"
                   ><i class="fab fa-github"></i> Code</a
                 >
@@ -537,18 +699,466 @@
 
     <footer class="bg-gray-50 py-8 text-center border-t border-gray-200">
       <p class="text-gray-500 text-sm">
-        &copy; 2024 Dibuat dengan
-        <i class="fas fa-heart text-red-500 mx-1"></i> dan Tailwind CSS.
+        &copy; 2026 Dibuat dengan Tailwind CSS.
       </p>
     </footer>
 
+    <div
+      id="modal-iot"
+      class="fixed inset-0 z-[100] hidden bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm transition-opacity"
+    >
+      <div
+        class="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-[fadeIn_0.3s_ease-out]"
+      >
+        <div
+          class="sticky top-0 bg-white p-6 border-b z-10 flex justify-between items-center"
+        >
+          <div>
+            <span
+              class="bg-indigo-600 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest"
+              >Skripsi / IoT</span
+            >
+            <h3 class="text-2xl font-bold text-gray-900 mt-2">
+              Monitoring Kualitas Air (ANFIS)
+            </h3>
+          </div>
+          <button
+            onclick="closeModal('modal-iot')"
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition"
+          >
+            <i class="fas fa-times text-gray-600"></i>
+          </button>
+        </div>
+
+        <div class="p-8 space-y-8">
+          <div>
+            <h4
+              class="text-lg font-bold text-gray-900 mb-4 border-l-4 border-indigo-500 pl-3"
+            >
+              Web Dashboard & Grafik
+            </h4>
+            <p class="text-secondary mb-4 text-sm">
+              Dashboard ini dibuat menggunakan HTML, CSS (Tailwind), dan
+              JavaScript untuk mengambil data secara <i>real-time</i> dari
+              Firebase. Menggunakan <b>Chart.js</b> untuk memvisualisasikan tren
+              suhu, pH, dan kekeruhan.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+              <div class="bg-gray-50 p-2 rounded-lg border">
+                <img
+                  src="img/iot.png"
+                  class="rounded shadow-sm w-full"
+                  alt="Dashboard View"
+                />
+                <p class="text-center text-xs text-gray-400 mt-2">
+                  Tampilan Dashboard Utama
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <hr class="border-gray-100" />
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4
+                class="text-lg font-bold text-gray-900 mb-4 border-l-4 border-green-500 pl-3"
+              >
+                Logika Cerdas (ANFIS)
+              </h4>
+              <p class="text-secondary text-sm leading-relaxed mb-4">
+                Sistem ini tidak hanya memonitor, tetapi juga melakukan
+                pengendalian otomatis. Algoritma
+                <b>Adaptive Neuro-Fuzzy Inference System (ANFIS)</b> diprogram
+                menggunakan <b>Python</b> untuk menentukan kapan pompa atau
+                heater harus menyala berdasarkan data sensor yang kompleks.
+              </p>
+              <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-check text-green-500"></i> Fuzzifikasi Data
+                  Input (Suhu, pH, NTU)
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-check text-green-500"></i> Pembentukan Basis
+                  Aturan (Rule Base)
+                </li>
+                <li class="flex items-center gap-2">
+                  <i class="fas fa-check text-green-500"></i> Defuzzifikasi
+                  Output (Durasi Aktuator)
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4
+                class="text-lg font-bold text-gray-900 mb-4 border-l-4 border-orange-500 pl-3"
+              >
+                Integrasi Hardware
+              </h4>
+              <img
+                src="img/Rangkaian.jpg"
+                class="rounded-lg border shadow-sm w-full mb-2"
+                alt="Hardware"
+              />
+              <p class="text-secondary text-xs">
+                Integrasi mikrokontroler (ESP32) dengan sensor pH, DS18B20
+                (Suhu), dan Turbidity Sensor. Data dikirim ke Firebase via WiFi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-6 border-t flex justify-end">
+          <button
+            onclick="closeModal('modal-iot')"
+            class="px-6 py-2 bg-gray-900 text-white rounded-lg hover:bg-black transition text-sm font-bold"
+          >
+            Tutup
+          </button>
+        </div>
+      </div>
+    </div>
+
     <script>
+      // 1. Toggle Mobile Menu
       const menuBtn = document.getElementById("menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
 
       menuBtn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
+
+      // 2. Logic Modal Detail Project (Pop-up Penjelasan)
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.classList.remove("hidden");
+          document.body.style.overflow = "hidden"; // Disable scroll body
+        }
+      }
+
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.classList.add("hidden");
+          document.body.style.overflow = "auto"; // Enable scroll body
+        }
+      }
+
+      // 3. Logic Image Zoom (Lightbox)
+      function openImageModal(src) {
+        const modal = document.getElementById("image-modal");
+        const img = document.getElementById("expanded-img");
+
+        img.src = src; // Set gambar modal sesuai yang diklik
+        modal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeImageModal() {
+        const modal = document.getElementById("image-modal");
+        modal.classList.add("hidden");
+        document.body.style.overflow = "auto";
+        setTimeout(() => {
+          document.getElementById("expanded-img").src = ""; // Reset src agar bersih
+        }, 200);
+      }
+
+      // Close modal on click outside (General)
+      window.onclick = function (event) {
+        // Jika klik pada background hitam modal detail
+        if (
+          event.target.classList.contains("fixed") &&
+          !event.target.id.includes("image-modal")
+        ) {
+          const openModals = document.querySelectorAll('[id^="modal-"]');
+          openModals.forEach((m) => m.classList.add("hidden"));
+          document.body.style.overflow = "auto";
+        }
+      };
     </script>
+    <div
+      id="modal-robotik"
+      class="fixed inset-0 z-[100] hidden bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-[fadeIn_0.3s_ease-out]"
+      >
+        <div
+          class="sticky top-0 bg-white p-6 border-b z-10 flex justify-between items-center"
+        >
+          <h3 class="text-xl font-bold text-gray-900">
+            Dokumentasi Kompetisi Robotik
+          </h3>
+          <button
+            onclick="closeModal('modal-robotik')"
+            class="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="p-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-2 group">
+              <img
+                src="img/tim.jpg"
+                onclick="openImageModal(this.src)"
+                class="rounded-lg shadow border w-full cursor-zoom-in hover:opacity-90 transition"
+                alt="Aksi Lomba"
+              />
+              <p class="text-center text-xs text-gray-500 italic">
+                Momen saat persiapan penerbangan wahana di KRTI.
+              </p>
+            </div>
+            <div class="space-y-2 group">
+              <img
+                src="img/wahana.jpg"
+                onclick="openImageModal(this.src)"
+                class="rounded-lg shadow border w-full cursor-zoom-in hover:opacity-90 transition"
+                alt="Tim Robotik"
+              />
+              <p class="text-center text-xs text-gray-500 italic">
+                Bersama tim dan wahana pesawat tanpa awak.
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-6 p-4 bg-indigo-50 rounded-xl text-sm text-indigo-900 leading-relaxed"
+          >
+            Sebagai bagian dari tim inti, saya terlibat langsung dalam
+            <i>setting hardware</i>, kalibrasi sensor telemetri, dan memastikan
+            komunikasi data antara pesawat dan Ground Control Station (GCS)
+            berjalan lancar.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal-mmm-real"
+      class="fixed inset-0 z-[100] hidden bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-[fadeIn_0.3s_ease-out]"
+      >
+        <div
+          class="sticky top-0 bg-white p-6 border-b z-10 flex justify-between items-center"
+        >
+          <h3 class="text-xl font-bold text-gray-900">
+            Detail: Inventory System PT MMM
+          </h3>
+          <button
+            onclick="closeModal('modal-mmm-real')"
+            class="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="p-8 space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <img
+              src="img/PTMMM-inventory.png"
+              onclick="openImageModal(this.src)"
+              class="rounded shadow border w-full object-contain bg-gray-50 cursor-zoom-in hover:opacity-90 transition"
+              alt="Dashboard"
+            />
+            <img
+              src="img/stok-akhir.png"
+              onclick="openImageModal(this.src)"
+              class="rounded shadow border w-full object-contain bg-gray-50 cursor-zoom-in hover:opacity-90 transition"
+              alt="Laporan Stok"
+            />
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-2 text-indigo-700">
+              Fitur Unggulan (Backend):
+            </h4>
+            <ul class="list-disc pl-5 text-sm text-gray-600 space-y-2">
+              <li>
+                <b>Laporan Stok Real-time:</b> Menggunakan algoritma perhitungan
+                <i>(Stok Awal + Masuk - Keluar)</i> yang dinamis berdasarkan
+                filter tanggal.
+              </li>
+              <li>
+                <b>Kartu Gudang Digital:</b> Menampilkan riwayat mutasi per
+                barang secara kronologis dengan saldo berjalan.
+              </li>
+              <li>
+                <b>Statistik Dashboard:</b> Visualisasi ringkasan total barang,
+                stok rendah, dan aktivitas transaksi terbaru.
+              </li>
+              <li>
+                <b>Pencarian & Filter Cepat:</b> Fitur pencarian barang
+                menggunakan AJAX/PHP native untuk kecepatan akses data.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal-mmm-academic"
+      class="fixed inset-0 z-[100] hidden bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-[fadeIn_0.3s_ease-out]"
+      >
+        <div
+          class="sticky top-0 bg-white p-6 border-b z-10 flex justify-between items-center"
+        >
+          <h3 class="text-xl font-bold text-gray-900">
+            Detail: Admin Stok (Versi Akademik)
+          </h3>
+          <button
+            onclick="closeModal('modal-mmm-academic')"
+            class="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="p-8 space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <img
+              src="img/PTMMM-V1.png"
+              onclick="openImageModal(this.src)"
+              class="rounded shadow border w-full object-contain bg-gray-50 cursor-zoom-in hover:opacity-90 transition"
+              alt="Home Admin"
+            />
+            <img
+              src="img/input-barang.png"
+              onclick="openImageModal(this.src)"
+              class="rounded shadow border w-full object-contain bg-gray-50 cursor-zoom-in hover:opacity-90 transition"
+              alt="Input Barang"
+            />
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-2 text-indigo-700">
+              Implementasi Teknis:
+            </h4>
+            <ul class="list-disc pl-5 text-sm text-gray-600 space-y-2">
+              <li>
+                <b>CRUD Lengkap:</b> Create, Read, Update, Delete data barang
+                dengan validasi form.
+              </li>
+              <li>
+                <b>Export PDF (FPDF):</b> Mengintegrasikan library FPDF untuk
+                mencetak laporan stok barang masuk ke dalam format dokumen siap
+                cetak.
+              </li>
+              <li>
+                <b>Session Management:</b> Sistem login admin sederhana untuk
+                mengamankan akses panel backend.
+              </li>
+              <li>
+                <b>Bootstrap 5 UI:</b> Menggunakan framework CSS Bootstrap untuk
+                mempercepat proses layouting tabel dan form.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="modal-bpjs"
+      class="fixed inset-0 z-[100] hidden bg-black/80 flex items-center justify-center p-4 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-[fadeIn_0.3s_ease-out]"
+      >
+        <div
+          class="sticky top-0 bg-white p-6 border-b z-10 flex justify-between items-center"
+        >
+          <h3 class="text-xl font-bold text-gray-900">
+            Detail: Pendaftaran BPJS
+          </h3>
+          <button
+            onclick="closeModal('modal-bpjs')"
+            class="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="p-8 space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <img
+              src="img/bpjs.png"
+              onclick="openImageModal(this.src)"
+              class="rounded shadow border w-full object-contain bg-gray-50 cursor-zoom-in hover:opacity-90 transition"
+              alt="Form BPJS"
+            />
+            <img
+              src="img/lihat-kartu.png"
+              onclick="openImageModal(this.src)"
+              class="rounded shadow border w-full object-contain bg-gray-50 cursor-zoom-in hover:opacity-90 transition"
+              alt="Cetak Kartu"
+            />
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-2 text-indigo-700">Fitur Utama:</h4>
+            <ul class="list-disc pl-5 text-sm text-gray-600 space-y-2">
+              <li>
+                <b>Form Validasi:</b> Validasi input data diri (NIK, Nama,
+                Alamat) di sisi client dan server.
+              </li>
+              <li>
+                <b>Upload Berkas:</b> Fitur upload foto atau dokumen pendukung
+                pendaftaran.
+              </li>
+              <li>
+                <b>Cetak Kartu Sementara:</b> Generate tampilan kartu peserta
+                BPJS sementara setelah data berhasil disubmit.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Fungsi untuk membuka modal apapun berdasarkan ID
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.classList.remove("hidden");
+          document.body.style.overflow = "hidden"; // Matikan scroll body
+        }
+      }
+
+      // Fungsi tutup modal
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.classList.add("hidden");
+          document.body.style.overflow = "auto"; // Hidupkan scroll body
+        }
+      }
+
+      // Tutup jika klik di luar area modal (background gelap)
+      window.onclick = function (event) {
+        if (event.target.classList.contains("fixed")) {
+          event.target.classList.add("hidden");
+          document.body.style.overflow = "auto";
+        }
+      };
+    </script>
+    <div
+      id="image-modal"
+      class="fixed inset-0 z-[150] hidden bg-black/95 flex items-center justify-center p-4 backdrop-blur-md transition-opacity duration-300"
+      onclick="closeImageModal()"
+    >
+      <button
+        class="absolute top-6 right-6 text-white/70 hover:text-white z-50 p-2 transition"
+      >
+        <i class="fas fa-times text-5xl"></i>
+      </button>
+
+      <img
+        id="expanded-img"
+        src=""
+        class="max-w-[85vw] max-h-[85vh] object-contain rounded-lg shadow-2xl animate-[zoomIn_0.2s_ease-out]"
+        onclick="event.stopPropagation()"
+      />
+    </div>
   </body>
 </html>
